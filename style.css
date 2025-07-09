@@ -12,6 +12,9 @@ body {
   background-repeat: no-repeat;
   color: #222;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main centered panel */
@@ -22,11 +25,11 @@ body {
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 0;
-  overflow: hidden;
+  flex-grow: 1;
 }
 
 /* Header, Main, Footer Layout */
-header, main, footer {
+header, main {
   padding: 1.5rem;
   max-width: 800px;
   margin: auto;
@@ -64,11 +67,11 @@ a:hover {
 /* Footer */
 footer {
   font-size: 0.9rem;
-  text-align: center;
   color: #666;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
-  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: auto;
+  text-align: left;
+  border-top: none; /* Removed white line */
 }
 
 /* Sections */
@@ -80,7 +83,7 @@ section {
 @media (max-width: 600px) {
   body {
     font-size: 16px;
-    padding: 1rem 0;
+    padding: 0;
   }
 
   .content-wrapper {
@@ -98,5 +101,10 @@ section {
 
   p {
     font-size: 1rem;
+  }
+
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
