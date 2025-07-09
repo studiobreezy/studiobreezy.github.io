@@ -18,7 +18,7 @@ body {
   background-color: #fbe19b;
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -99,16 +99,13 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 600px) {
-  body {
-    padding: 1rem 0;
+  .content-wrapper {
+    margin: 0 1rem; /* Adds side margin */
+    padding: 1rem;
   }
 
-  .content-wrapper {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;       /* Center it */
-    padding: 1rem;
-    box-sizing: border-box;
+  .top-banner {
+    max-width: calc(100% - 2rem); /* match margin */
   }
 }
 
