@@ -13,11 +13,9 @@ body {
 
 .content-wrapper {
   max-width: 860px;
-  margin: 0 auto; /* removes top/bottom margin, centers horizontally */
-  padding: 2rem;
+  margin: auto; /* removes top/bottom margin, centers horizontally */
+  padding: 1.5rem;
   background-color: rgba(251, 223, 155, 1); /* light, readable */
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
   min-height: 100vh; /* ensures it fills the page */
   display: flex;
@@ -27,9 +25,8 @@ body {
 
 .top-banner {
   width: 100%;
-  max-height: 200px;         /* Optional: limits height */
-  object-fit: cover;         /* Ensures it fills nicely without stretching */
-  border-bottom: 1px solid #ccc;
+  height: auto;       
+  display: block;
   margin-bottom: 1rem;
 }
 
