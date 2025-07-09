@@ -25,7 +25,8 @@ body {
 /* Banner styling */
 .top-banner {
   display: block;
-  width: 110%;
+  width: 100%;
+  max-width: none;
   height: auto;
   display: block;
   margin: 0;
@@ -46,9 +47,13 @@ body {
 
 .site-banner p {
   margin: 0.3rem 0 0;
-  font-size: 1rem;
+  font-size: 1re
+  m;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 header, main, footer {
   padding: 1.5rem;
