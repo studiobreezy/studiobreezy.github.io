@@ -13,12 +13,18 @@ body {
 
 .content-wrapper {
   max-width: 860px;
-  margin: 2rem auto;
+  margin: 0 auto; /* removes top/bottom margin, centers horizontally */
   padding: 2rem;
-  background-color: rgba(251, 248, 239, 0.9); /* translucent white bg */
-  border-radius: 1rem;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  background-color: rgba(224, 226, 176, 0.9); /* light, readable */
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  min-height: 100vh; /* ensures it fills the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .site-banner {
   background-color: #e5f6f9;
@@ -88,6 +94,12 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 600px) {
+    
+  .content-wrapper {
+  padding: 1rem;
+  margin: 0 1rem; /* adds space on left and right on mobile */
+  }
+
   body {
     font-size: 1rem;
   }
