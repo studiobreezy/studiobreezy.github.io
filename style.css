@@ -11,25 +11,25 @@ body {
   line-height: 1.6;
 }
 
+/* Main centered panel */
 .content-wrapper {
-  max-width: 860px;
-  margin: auto; /* removes top/bottom margin, centers horizontally */
+  max-width: 800px;
+  margin: 0 auto;
+    background-color: rgba(251, 225, 155, 0.1); /* light, readable */
   padding: 1.5rem;
-  background-color: rgba(251, 223, 155, 1); /* light, readable */
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-  min-height: 100vh; /* ensures it fills the page */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
 }
 
+/* Banner styling */
 .top-banner {
   width: 100%;
-  height: auto;       
+  height: auto;
   display: block;
-  margin-bottom: 1rem;
+  margin: 0;
+  border-radius: 8px 8px 0 0;
 }
-
 
 .site-banner {
   background-color: #e5f6f9;
@@ -99,25 +99,12 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 600px) {
+  body {
+    padding: 1rem 0;
+  }
 
   .content-wrapper {
-  padding: 1rem;
-  margin: 0 1rem; /* adds space on left and right on mobile */
-  }
-
-  body {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  header, main, footer {
+    margin: 0 1rem;
     padding: 1rem;
   }
 }
