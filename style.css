@@ -24,6 +24,7 @@ body {
 
 /* Banner styling */
 .top-banner {
+  display: block;
   width: 100%;
   height: auto;
   display: block;
@@ -99,13 +100,19 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 600px) {
+  body {
+    padding: 1rem 0;
+  }
+
   .content-wrapper {
-    margin: 0 1rem; /* Adds side margin */
+    margin: 0 1rem;
     padding: 1rem;
+    /* REMOVE width: 100%; so max-width applies */
+    /* REMOVE max-width override here */
   }
 
   .top-banner {
-    max-width: calc(100% - 2rem); /* match margin */
+    max-width: 100%;
   }
 }
 
