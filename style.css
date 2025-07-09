@@ -15,7 +15,7 @@ body {
   max-width: 860px;
   margin: 0 auto; /* removes top/bottom margin, centers horizontally */
   padding: 2rem;
-  background-color: rgba(224, 226, 176, 0.9); /* light, readable */
+  background-color: rgba(251, 223, 155); /* light, readable */
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
@@ -94,7 +94,7 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 600px) {
-    
+
   .content-wrapper {
   padding: 1rem;
   margin: 0 1rem; /* adds space on left and right on mobile */
