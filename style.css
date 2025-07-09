@@ -1,64 +1,81 @@
-/* Base styles */
+/* Base Styles */
 body {
-  margin: 0;
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 12px;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
   background-image: url("images/background_day_1280x1280.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #222;
+  line-height: 1.6;
 }
 
 /* Centered content panel */
 .content-wrapper {
   max-width: 800px;
+  margin: 2rem auto;
   background-color: #fbe19b;
-  margin: 0 auto;
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
 }
 
-/* Typography */
-h1, h2, p, li {
-  margin: 0 0 1rem;
-}
+/* Headings and layout */
 h1 {
   font-size: 1.5rem;
-}
-h2 {
-  font-size: 1.1rem;
-}
-ul {
-  padding-left: 1.2rem;
-}
-
-/* Footer */
-footer {
-  margin-top: 2rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #555;
+  margin-bottom: 1rem;
 }
 
-/* Links */
+h2 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+p, li {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
 a {
   color: #0087ff;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-/* Mobile optimization */
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Mobile Styling */
 @media (max-width: 600px) {
   .content-wrapper {
+    margin: 1rem;
     padding: 1rem;
-    margin: 0 1rem;
   }
 
-  body {
-    font-size: 11px;
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  p, li {
+    font-size: 0.7rem;
   }
 }
