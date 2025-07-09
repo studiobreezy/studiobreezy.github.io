@@ -1,123 +1,82 @@
-/* Base Styles */
+/* Base styles */
 body {
-  font-family: 'Press Start 2P', sans-serif;
   margin: 0;
-  padding: 0;
-  background-image: url("images/background_day_1280x1280.png"); /* Adjust path as needed */
-  background-size: cover;        /* Scale the image to cover the page */
-  background-position: center;   /* Center the image */
-  background-repeat: no-repeat;  /* Prevent tiling */
+  font-family: 'Press Start 2P', sans-serif;
+  background: #fff;
   color: #222;
+  font-size: 12px; /* adjust this if the pixel font is too small */
   line-height: 1.6;
 }
 
-/* Main centered panel */
-.content-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fbe19b;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 0;
-  overflow: hidden;
-}
-
-/* Banner styling */
+/* Banner at top */
 .top-banner {
+  width: 100%;
+  background: #000;
+}
+.top-banner img {
   display: block;
   width: 100%;
-  max-width: none;
   height: auto;
-  display: block;
   margin: 0;
-  border-radius: 0;
 }
 
-.site-banner {
-  background-color: #e5f6f9;
-  padding: 1.2rem;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
+/* Content background under banner */
+.content-background {
+  background-image: url("images/background_day_1280x1280.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
 }
 
-.site-banner h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.site-banner p {
-  margin: 0.3rem 0 0;
-  font-size: 1re
-  m;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-header, main, footer {
-  padding: 1.5rem;
+/* Centered content panel */
+.content-wrapper {
   max-width: 800px;
-  margin: auto;
+  background-color: #fbe19b;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Typography */
+h1, h2, p, li {
+  margin: 0 0 1rem;
+}
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
 }
-
-p {
-  margin-bottom: 1rem;
+h2 {
+  font-size: 1.1rem;
 }
-
-a {
-  color: #0087ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 ul {
   padding-left: 1.2rem;
 }
 
-section {
-  margin-bottom: 2.5rem;
-}
-
-/* Responsive Headings */
-h2 {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-}
-
 /* Footer */
 footer {
-  font-size: 0.9rem;
-  text-align: center;
-  color: #666;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
   margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-/* Mobile Optimization */
+/* Links */
+a {
+  color: #0087ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
 @media (max-width: 600px) {
-  body {
-    padding: 1rem 0;
-  }
-
   .content-wrapper {
-    margin: 0 1rem;
     padding: 1rem;
-    /* REMOVE width: 100%; so max-width applies */
-    /* REMOVE max-width override here */
+    margin: 0 1rem;
   }
 
-  .top-banner {
-    max-width: 100%;
+  body {
+    font-size: 11px;
   }
 }
-
