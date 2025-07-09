@@ -2,31 +2,13 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', sans-serif;
-  background: #fff;
-  color: #222;
-  font-size: 12px; /* adjust this if the pixel font is too small */
+  font-size: 12px;
   line-height: 1.6;
-}
-
-/* Banner at top */
-.top-banner {
-  width: 100%;
-  background: #000;
-}
-.top-banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-/* Content background under banner */
-.content-background {
   background-image: url("images/background_day_1280x1280.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem 1rem;
+  color: #222;
 }
 
 /* Centered content panel */
