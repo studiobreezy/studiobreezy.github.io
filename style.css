@@ -3,7 +3,10 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fffefc;
+  background-image: url("images/background_day_1280x1280.png"); /* Adjust path as needed */
+  background-size: cover;        /* Scale the image to cover the page */
+  background-position: center;   /* Center the image */
+  background-repeat: no-repeat;  /* Prevent tiling */
   color: #222;
   line-height: 1.6;
 }
