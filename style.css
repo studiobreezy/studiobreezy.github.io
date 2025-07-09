@@ -8,6 +8,24 @@ body {
   line-height: 1.6;
 }
 
+.site-banner {
+  background-color: #e5f6f9;
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.site-banner h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.site-banner p {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+}
+
+
 header, main, footer {
   padding: 1.5rem;
   max-width: 800px;
