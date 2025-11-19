@@ -6,13 +6,18 @@
     <title>Playtest Access</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: url('images/secret-hq.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #eee;
-            text-align: center;
-            padding-top: 80px;
+        margin: 0;
+        height: 100vh; /* full viewport height */
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center;     /* vertical center */
+        background: url('images/bg_caves.png') no-repeat center center fixed;
+        background-size: cover;
         }
+
+.container {
+  text-align: center; /* centers text inside */
+}
         #content {
             display: none;
             max-width: 600px;
@@ -37,8 +42,13 @@
     </style>
 </head>
 <body>
-
-    <p>Please enter the access code to continue.</p>
+    <div class="container">
+    <h1>Playtester Access</h1>
+    <form>
+      <input type="password" placeholder="Enter access code">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
     <input id="passwordInput" type="password" placeholder="Enter password" />
     <button onclick="checkPassword()">Submit</button>
