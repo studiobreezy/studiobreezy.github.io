@@ -1,79 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playtest Access</title>
-    <style>
-        body {
-        margin: 0;
-        height: 100vh; /* full viewport height */
-        display: flex;
-        justify-content: center; /* horizontal center */
-        align-items: center;     /* vertical center */
-        background: url('images/bg_caves.png') no-repeat center center fixed;
-        background-size: cover;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playtest Access</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* full viewport height */
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      background: url('images/bg_caves.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+      color: #fff;
+    }
 
-.container {
-  text-align: center; /* centers text inside */
-}
-        #content {
-            display: none;
-            max-width: 600px;
-            margin: auto;
-        }
-        input {
-            padding: 10px;
-            font-size: 1rem;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .box {
-            margin-top: 20px;
-            padding: 20px;
-            background: #222;
-            border-radius: 8px;
-        }
-    </style>
+    .container {
+      text-align: center; /* centers text inside */
+    }
+
+    #content {
+      display: none;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .box {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(34, 34, 34, 0.85); /* semi-transparent for readability */
+      border-radius: 8px;
+    }
+
+    h1, h2, p {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* makes text pop */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <h1>Playtester Access</h1>
-    <form>
-      <input type="password" placeholder="Enter access code">
-      <button type="submit">Submit</button>
-    </form>
-   </div>
-</body>
-
-    <input id="passwordInput" type="password" placeholder="Enter password" />
+    <input id="passwordInput" type="password" placeholder="Enter access code" />
     <button onclick="checkPassword()">Submit</button>
 
     <div id="content" class="box">
-        <h2>Unity Test Build</h2>
-        <p>Thanks for helping playtest! Here’s the current build:</p>
-
-        <!-- Drop your Unity Cloud Build link here -->
-        <a id="buildLink" href="https://cloud.unity.com/public-share/build-automation/share?shareId=LcPPGhUTGoKcL_-2Bb4qnKv4CH1xo6W7PDsbow1O4nw" target="_blank">👉 Download Build</a>
+      <h2>Unity Test Build</h2>
+      <p>Thanks for helping playtest! Here’s the current build:</p>
+      <a id="buildLink" href="https://cloud.unity.com/public-share/build-automation/share?shareId=LcPPGhUTGoKcL_-2Bb4qnKv4CH1xo6W7PDsbow1O4nw" target="_blank">👉 Download Build</a>
     </div>
+  </div>
 
-    <script>
-        function checkPassword() {
-            const correctPassword = "Mayormilton"; // <-- change this!
-            const input = document.getElementById("passwordInput").value;
+  <script>
+    function checkPassword() {
+      const correctPassword = "Mayormilton"; // <-- change this!
+      const input = document.getElementById("passwordInput").value;
 
-            if (input === correctPassword) {
-                document.getElementById("content").style.display = "block";
-            } else {
-                alert("Incorrect password.");
-            }
-        }
-    </script>
-
+      if (input === correctPassword) {
+        document.getElementById("content").style.display = "block";
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
 </body>
 </html>
