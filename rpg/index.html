@@ -41,19 +41,24 @@
       <section>
         <h2>Screenshots</h2>
         <div class="screenshot-grid">
-          <img src="../images/Screenshot 2025-11-17 142959.png" alt="RPG screenshot 1">
-          <img src="../images/Screenshot 2025-12-12 143648.png" alt="RPG screenshot 2">
-          <img src="../images/Screenshot 2025-12-12 144126.png" alt="RPG screenshot 3">
-          <img src="../images/Screenshot 2025-12-12 144306.png" alt="RPG screenshot 4">
-          <img src="../images/Screenshot 2025-12-12 144809.png" alt="RPG screenshot 5">
-          <img src="../images/Screenshot 2025-12-12 145043.png" alt="RPG screenshot 6">
-          <img src="../images/Screenshot 2025-12-12 153740.png" alt="RPG screenshot 7">
-          <img src="../images/Screenshot 2025-12-12 153826.png" alt="RPG screenshot 8">
-          <img src="../images/Screenshot 2025-12-12 155504.png" alt="RPG screenshot 9">
-          <img src="../images/Screenshot 2025-12-12 155953.png" alt="RPG screenshot 10">
-          <img src="../images/Screenshot 2025-12-12 160116.png" alt="RPG screenshot 11">
+          <a href="../images/Screenshot 2025-11-17 142959.png"><img src="../images/Screenshot 2025-11-17 142959.png" alt="RPG screenshot 1"></a>
+          <a href="../images/Screenshot 2025-12-12 143648.png"><img src="../images/Screenshot 2025-12-12 143648.png" alt="RPG screenshot 2"></a>
+          <a href="../images/Screenshot 2025-12-12 144126.png"><img src="../images/Screenshot 2025-12-12 144126.png" alt="RPG screenshot 3"></a>
+          <a href="../images/Screenshot 2025-12-12 144306.png"><img src="../images/Screenshot 2025-12-12 144306.png" alt="RPG screenshot 4"></a>
+          <a href="../images/Screenshot 2025-12-12 144809.png"><img src="../images/Screenshot 2025-12-12 144809.png" alt="RPG screenshot 5"></a>
+          <a href="../images/Screenshot 2025-12-12 145043.png"><img src="../images/Screenshot 2025-12-12 145043.png" alt="RPG screenshot 6"></a>
+          <a href="../images/Screenshot 2025-12-12 153740.png"><img src="../images/Screenshot 2025-12-12 153740.png" alt="RPG screenshot 7"></a>
+          <a href="../images/Screenshot 2025-12-12 153826.png"><img src="../images/Screenshot 2025-12-12 153826.png" alt="RPG screenshot 8"></a>
+          <a href="../images/Screenshot 2025-12-12 155504.png"><img src="../images/Screenshot 2025-12-12 155504.png" alt="RPG screenshot 9"></a>
+          <a href="../images/Screenshot 2025-12-12 155953.png"><img src="../images/Screenshot 2025-12-12 155953.png" alt="RPG screenshot 10"></a>
+          <a href="../images/Screenshot 2025-12-12 160116.png"><img src="../images/Screenshot 2025-12-12 160116.png" alt="RPG screenshot 11"></a>
         </div>
       </section>
+
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <span class="close" id="lightboxClose" aria-label="Close">✕</span>
+        <img id="lightboxImg" alt="Expanded screenshot" />
+      </div>
 
       <p><a href="/">← Back to homepage</a></p>
     </main>
@@ -62,5 +67,33 @@
       <p>© 2025 CrazyBirdLady</p>
     </footer>
   </div>
+  <script>
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbClose = document.getElementById('lightboxClose');
+      document.querySelectorAll('.screenshot-grid a').forEach(a => {
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          const src = this.getAttribute('href');
+          lbImg.src = src;
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+        });
+      });
+      function closeLb(){
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.removeAttribute('src');
+      }
+      lbClose.addEventListener('click', closeLb);
+      lb.addEventListener('click', function(e){
+        if(e.target === lb) closeLb();
+      });
+      document.addEventListener('keyup', function(e){
+        if(e.key === 'Escape') closeLb();
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("images/background_day_1280x1280.png");
-  background-size: cover;
+  background-size: 1600px auto;
   background-position: center;
   background-repeat: no-repeat;
   color: #222;
@@ -79,8 +79,61 @@ section {
   margin-bottom: 2.5rem;
 }
 
+/* Screenshot Grid */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.screenshot-grid a {
+  display: block;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 /* Mobile Optimization */
 @media (max-width: 600px) {
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   body {
     font-size: 16px;
     padding: 0;
