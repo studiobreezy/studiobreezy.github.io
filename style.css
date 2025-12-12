@@ -17,6 +17,13 @@ body {
   flex-direction: column;
 }
 
+/* RPG page background override */
+.rpg-page {
+  background-size: cover;            /* fill the screen */
+  background-position: top center;   /* start from top */
+  background-color: #0b3d2e;         /* dark green fallback below image */
+}
+
 /* Main centered panel */
 .content-wrapper {
   max-width: 800px;
