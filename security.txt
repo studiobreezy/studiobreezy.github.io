@@ -1,0 +1,9 @@
+# security.txt for studiobreezy.github.io
+# See https://securitytxt.org/
+
+Contact: mailto:wendy@crazybirdlady.net
+Policy: https://studiobreezy.github.io/
+Hiring: https://studiobreezy.github.io/aboutme.html
+Preferred-Languages: en
+Canonical: https://studiobreezy.github.io/security.txt
+Expires: 2026-12-31T23:59:59Z

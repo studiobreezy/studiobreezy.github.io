@@ -1,0 +1,7 @@
+# robots.txt for studiobreezy.github.io
+User-agent: *
+Allow: /
+
+# Optional: block common private files (none currently)
+# Disallow: /admin/
+# Disallow: /private/
