@@ -66,6 +66,19 @@ p {
 }
 
 ul {
+
+/* Status badge under page title */
+.status-badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #0b3d2e;
+  background: #c6f3df;
+  border: 1px solid #0b3d2e;
+  border-radius: 4px;
+}
   padding-left: 1.2rem;
 }
 
