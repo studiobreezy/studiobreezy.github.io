@@ -7,4 +7,4 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap
-Sitemap: https://studiobreezy.github.io/sitemap.xml
+Sitemap: https://crazybirdlady.net/sitemap.xml
