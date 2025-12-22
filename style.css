@@ -96,20 +96,22 @@ a:hover {
   color-scheme: light;
 }
 
-/* Preserve yellow panel in dark mode (Edge mobile fix) */
+/* Dark mode theme: use dark green panel and light text */
 @media (prefers-color-scheme: dark) {
-  /* Reassert light colors so the browser doesn't auto-tint */
-  :root { color-scheme: light; }
+  /* Declare dark scheme so Edge doesn't auto-tint */
+  :root { color-scheme: dark; }
 
-  /* Keep the content panel yellow, prevent green/brown tint */
   .content-wrapper {
-    background-color: #fbe19b !important;
+    background-color: #0b3d2e !important; /* deep green */
+    color: #eaeaea; /* default text inside panel */
   }
 
-  /* Maintain text color contrast inside the yellow panel */
   body, h1, h2, h3, p, li {
-    color: #222;
+    color: #eaeaea;
   }
+
+  /* Slightly lighter link color for contrast on dark */
+  a { color: #8ecaff; }
 }
 
 /* Footer */
