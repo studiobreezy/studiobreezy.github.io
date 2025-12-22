@@ -100,8 +100,8 @@ a:hover {
 @media (prefers-color-scheme: dark) {
   body {
     color: #ffffff;
-    /* remove day image to prevent odd color inversion in dark mode */
-    background-image: none;
+    /* use dedicated night background in dark mode */
+    background-image: url("images/background_night_1280x1280.png");
     background-color: #001b3f; /* deep navy backdrop */
   }
 
