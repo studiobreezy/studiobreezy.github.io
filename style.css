@@ -111,8 +111,9 @@ a:hover {
 
   /* Ensure RPG page uses the same sizing as day */
   .rpg-page {
-    background-size: 1600px auto;
-    background-position: center;
+    /* match light-mode RPG behavior for mobile: full-cover from top */
+    background-size: cover;
+    background-position: top center;
     background-repeat: no-repeat;
   }
 
