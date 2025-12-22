@@ -124,7 +124,8 @@
       document.querySelectorAll('.screenshot-grid a').forEach(a => {
         a.addEventListener('click', function(e){
           e.preventDefault();
-          const src = this.getAttribute('href');
+          // Use the anchor's resolved URL so spaces are properly encoded
+          const src = this.href;
           lbImg.src = src;
           lb.classList.add('open');
           lb.setAttribute('aria-hidden', 'false');
