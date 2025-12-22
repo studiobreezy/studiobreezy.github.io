@@ -91,53 +91,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Inform the browser we support both schemes */
+/* Declare light-only color scheme to prevent UA darkening */
 :root {
-  color-scheme: light dark;
-}
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #ffffff;
-    /* use dedicated night background in dark mode */
-    background-image: url("images/background_night_1280x1280.png");
-    background-color: #001b3f; /* deep navy backdrop */
-    /* match day settings */
-    background-size: 1600px auto;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* Ensure RPG page uses the same sizing as day */
-  .rpg-page {
-    /* match light-mode RPG behavior for mobile: full-cover from top */
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
-
-  .content-wrapper {
-    background-color: #0d1b2a; /* dark blue panel */
-    color: #ffffff;
-    box-shadow: 0 0 12px rgba(0,0,0,0.4);
-  }
-
-  h1, h2, h3, p, li {
-    color: #ffffff;
-  }
-
-  a {
-    color: #ffd447; /* yellow links in dark mode */
-  }
-
-  a:hover {
-    color: #ffea80; /* lighter yellow on hover */
-  }
-
-  footer {
-    color: #bbbbbb;
-  }
+  color-scheme: light;
 }
 
 /* Footer */
