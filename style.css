@@ -96,6 +96,22 @@ a:hover {
   color-scheme: light;
 }
 
+/* Preserve yellow panel in dark mode (Edge mobile fix) */
+@media (prefers-color-scheme: dark) {
+  /* Reassert light colors so the browser doesn't auto-tint */
+  :root { color-scheme: light; }
+
+  /* Keep the content panel yellow, prevent green/brown tint */
+  .content-wrapper {
+    background-color: #fbe19b !important;
+  }
+
+  /* Maintain text color contrast inside the yellow panel */
+  body, h1, h2, h3, p, li {
+    color: #222;
+  }
+}
+
 /* Footer */
 footer {
   font-size: 0.9rem;
