@@ -91,6 +91,43 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Inform the browser we support both schemes */
+:root {
+  color-scheme: light dark;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ffffff;
+    /* remove day image to prevent odd color inversion in dark mode */
+    background-image: none;
+    background-color: #001b3f; /* deep navy backdrop */
+  }
+
+  .content-wrapper {
+    background-color: #0d1b2a; /* dark blue panel */
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  }
+
+  h1, h2, h3, p, li {
+    color: #ffffff;
+  }
+
+  a {
+    color: #ffd447; /* yellow links in dark mode */
+  }
+
+  a:hover {
+    color: #ffea80; /* lighter yellow on hover */
+  }
+
+  footer {
+    color: #bbbbbb;
+  }
+}
+
 /* Footer */
 footer {
   font-size: 0.9rem;
